@@ -106,8 +106,8 @@ def main(_argv):
             print("Saving models...")
 
             try:
-                torch.save(model.state_dict(), FLAGS.root + "\\trained_model\\model.h5")
-        
+                #torch.save(model.state_dict(), FLAGS.root + "\\trained_model\\model.h5")
+                torch.save(model.state_dict(), FLAGS.root + "/model.h5")
                 print("Model is saved...")
             except Exception as e:
                 print("Error while saving model: ",e)
@@ -117,8 +117,8 @@ def main(_argv):
         
         print("Loading models weights...")
         try:
-            model.load_state_dict(torch.load(FLAGS.root + "\\trained_model\\model.h5"))
-
+            #model.load_state_dict(torch.load(FLAGS.root + "\\trained_model\\model.h5"))
+            model.load_state_dict(torch.load(FLAGS.root + "/model.h5"))
             print("Weights Loaded...")
         except Exception as e:
             print("Error while loading the model:", e)

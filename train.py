@@ -40,8 +40,8 @@ def train_model(model, dataloader, num_epochs ,device):
 
             optimizer.step()
 
-            if count % 50 == 0:
-                print("Epoches:[",epoch,"/",num_epochs,"]", "\tBatch:[",count,"/", len(dataloader),"]","\tCategorial cross entropy loss=",loss.item())
+            #if count % 50 == 0:
+            print("Epoches:[",epoch,"/",num_epochs,"]", "\tBatch:[",count,"/", len(dataloader),"]","\tCategorial cross entropy loss=",loss.item())
         
 
             count=count+1
